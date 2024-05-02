@@ -283,3 +283,8 @@ Outputs:
   ALBEndpoint:
     Description: URL of the  Application Load Balancer
     Value: !GetAtt myALB.DNSName
+
+
+Outputs:
+  ALBEndpoint:
+    Description:   
