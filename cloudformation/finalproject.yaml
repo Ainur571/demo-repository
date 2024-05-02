@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "My fitst template"
+Parameters:
+  Versioning: 
+    Type: String
+    Default: Enabled
+  Name:
+    Type: String
+    Default:  demo-ainur-123
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: !Ref Name
+      VersioningConfiguration: 
+        Status: !Ref Versioning
+    
